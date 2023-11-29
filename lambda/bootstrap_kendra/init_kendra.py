@@ -9,10 +9,10 @@ genai_s3_bucket = ssm_client.get_parameter(Name="genai_s3_bucket")["Parameter"][
 genai_kendra_index_id = ssm_client.get_parameter(Name="genai_kendra_index_id")["Parameter"]["Value"]
 genai_s3_data_source_id = ssm_client.get_parameter(Name="genai_s3_data_source_id")["Parameter"]["Value"]
 
-seed_documents = ["https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-dg.pdf",
-                  "https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-userguide.pdf",
-                  "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-ug.pdf",
-                  "https://docs.aws.amazon.com/lambda/latest/dg/lambda-dg.pdf"]
+# seed_documents = ["https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-dg.pdf",
+#                   "https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-userguide.pdf",
+#                   "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-ug.pdf",
+#                   "https://docs.aws.amazon.com/lambda/latest/dg/lambda-dg.pdf"]
 
 def s3_folder_exists(bucket:str, path:str) -> bool:
     '''
