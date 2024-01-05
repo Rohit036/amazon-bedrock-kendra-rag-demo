@@ -9,7 +9,7 @@ with c1:
     st.image("./images/bedrock.png", width=70)
 
 with c2:
-    st.markdown("<h2 style='text-align: left; line-height: 10pt'>IBM QnA with Custom Documents.</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: left; line-height: 10pt'>Onboarding onto MCC.</h2>", unsafe_allow_html=True)
     st.caption("Q&A application")
     
 st.sidebar.success("Select an option above ☝️")
