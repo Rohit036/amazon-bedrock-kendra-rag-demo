@@ -12,8 +12,8 @@ env=cdk.Environment(account=account_id, region=region_name)
 
 app = cdk.App()
 
-vpc_stack = VpcStack(app, "GenAiRagVpcStack", env=env)
-kendra_stack = KendraStack(app, "GenAiRagKendraStack", vpc=vpc_stack.vpc, env=env)
-WebStack(app, "GenAiRagWebStack", vpc=vpc_stack.vpc, env=env)
+vpc_stack = VpcStack(app, "GenAiRagVpcStackIBM", env=env)
+kendra_stack = KendraStack(app, "GenAiRagKendraStackIBM", vpc=vpc_stack.vpc, env=env)
+WebStack(app, "GenAiRagWebStackIBM", vpc=vpc_stack.vpc, env=env)
 
 app.synth()
