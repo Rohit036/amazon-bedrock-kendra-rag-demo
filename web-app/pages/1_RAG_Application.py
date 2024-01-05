@@ -93,7 +93,7 @@ def write_top_bar():
     with col1:
         st.image(BEDROCK_ICON, use_column_width='always')
     with col2:
-        header = f"Q&A chatbot for Onboarding"
+        header = f"Onboarding onto MCC"
         st.write(f"<h3 class='main-header'>{header}</h3>", unsafe_allow_html=True)
     with col3:
         clear = st.button("Clear Chat")
