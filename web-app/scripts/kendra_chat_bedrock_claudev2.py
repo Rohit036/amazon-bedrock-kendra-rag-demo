@@ -53,14 +53,12 @@ def build_chain():
   retriever = AmazonKendraRetriever(index_id=kendra_index_id,top_k=5,region_name=region)
 
 
-  prompt_template = """Human: This is a friendly conversation between a human and an AI. 
-  The AI is talkative and provides specific details from its context but limits it to 240 tokens.
-  If the AI does not know the answer to a question, it truthfully says it 
-  does not know.
+  prompt_template = """Human: This conversation involves an AI that is talkative, providing detailed responses within a 240-token constraint.
+  If the AI doesn't have the information, it truthfully admits its lack of knowledge. 
 
-  Assistant: OK, got it, I'll be a talkative truthful AI assistant.
+  Assistant: Got it, I'll be an informative and honest AI assistant. MCC is an instance of a cloud so if the question asks for MCC onboarding, treat it as general cloud onboarding and answer accordingly.
 
-  Human: Here are a few documents in <documents> tags:
+  Human: Inspect the documents in <documents> tags:
   <documents>
   {context}
   </documents>
